@@ -7,15 +7,17 @@ namespace RenbitTestTask.Application.Services
 {
     public class FileService
     {
-        private readonly string _storageAccount = "blobcontainermihallut";
-        private readonly string _key = "fCMwO+UDnn4mOEshiU6+jNS6LjB2OXkwfCEdV4FOja+Ts513VkVCHJzrtu1LNKBLkSSU3RaWBoaF+AStNndS/w==";
+        private readonly string _storageAccount = Environment.GetEnvironmentVariable("STORAGE_ACCOUNT_NAME");
+        private readonly string _key = Environment.GetEnvironmentVariable("STORAGE_KEY");
         private readonly BlobContainerClient _filesContainer;
+        private readonly BlobServiceClient _blobServiceClient;
 
         public FileService()
         {
             var credential = new StorageSharedKeyCredential(_storageAccount, _key);
             var blobUri = $"https://{_storageAccount}.blob.core.windows.net";
-            _filesContainer = new BlobContainerClient(new Uri(blobUri), credential);
+            _blobServiceClient = new BlobServiceClient(new Uri(blobUri), credential);
+            _filesContainer = _blobServiceClient.GetBlobContainerClient("files");
         }
 
         public async Task<BlobResponseDto> UploadAsync(IBrowserFile blob)
@@ -23,12 +25,20 @@ namespace RenbitTestTask.Application.Services
             BlobResponseDto response = new();
             BlobClient client = _filesContainer.GetBlobClient(blob.Name);
 
-            await using (Stream data = blob.OpenReadStream())
+            try
             {
-                await client.UploadAsync(data);
+                await using (Stream data = blob.OpenReadStream())
+                {
+                    await client.UploadAsync(data);
+                }
             }
-
-            response.Status = $"File {blob.Name} uploaded sucessfuly";
+            catch (Exception ex)
+            {
+                response.Error = true;
+                response.Status = ex.Message;
+                return response;
+            }
+            response.Status = $"\nFile {blob.Name} uploaded sucessfuly";
             response.Error = false;
             response.Blob.Uri = client.Uri.AbsoluteUri;
             response.Blob.Name = blob.Name;
