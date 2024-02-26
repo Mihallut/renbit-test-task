@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenbitTestTask.WebApp", "RenbitTestTask.WebApp\RenbitTestTask.WebApp.csproj", "{B922498C-91B4-4593-818D-3FFE44388786}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RenbitTestTask.WebApp", "RenbitTestTask.WebApp\RenbitTestTask.WebApp.csproj", "{B922498C-91B4-4593-818D-3FFE44388786}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenbitTestTask.Application", "RenbitTestTask.Application\RenbitTestTask.Application.csproj", "{A8B55A86-4547-41E5-8407-9812D66C9256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RenbitTestTask.Application", "RenbitTestTask.Application\RenbitTestTask.Application.csproj", "{A8B55A86-4547-41E5-8407-9812D66C9256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenbitTestTask.Tests", "RenbitTestTask.Tests\RenbitTestTask.Tests.csproj", "{E2FC3AB4-B4AF-4EA3-99BD-FA03563D407A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RenbitTestTask.Tests", "RenbitTestTask.Tests\RenbitTestTask.Tests.csproj", "{E2FC3AB4-B4AF-4EA3-99BD-FA03563D407A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

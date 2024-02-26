@@ -28,3 +28,17 @@ C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\obj\Debu
 C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\obj\Debug\net8.0\RenbitTestTask.WebApp.pdb
 C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\obj\Debug\net8.0\RenbitTestTask.WebApp.genruntimeconfig.cache
 C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\obj\Debug\net8.0\ref\RenbitTestTask.WebApp.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\Blazored.FluentValidation.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\MediatR.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\obj\Debug\net8.0\RenbitTestTask.WebApp.csproj.AssemblyReference.cache
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\obj\Debug\net8.0\RenbitTestTask.WebApp.csproj.CopyComplete
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\RenbitTestTask.Application.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\RenbitTestTask.Application.pdb
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.WebApp\bin\Debug\net8.0\System.Memory.Data.dll

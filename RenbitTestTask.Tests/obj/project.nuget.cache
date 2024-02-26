@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "BbQYJ5Eu//JKYwGHJLLIQXTQFZfGQDMnSkFDC7gu6xSWzz4FwlMLbs1VQfiL8w5EQdM1Ebyt9+qVcGATZZXACQ==",
+  "dgSpecHash": "GCfDAwjmvJNyVHEGCsBUIBUn0s1k30sVg4pcz6V2Wakyk0md+ch5p6oeC4hfY6ZFXjr885k7Z4PXO1Jo1CQ4Vg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\RenbitTestTask.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mik\\.nuget\\packages\\coverlet.collector\\6.0.1\\coverlet.collector.6.0.1.nupkg.sha512",
+    "C:\\Users\\Mik\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\Mik\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Mik\\.nuget\\packages\\microsoft.codecoverage\\17.9.0\\microsoft.codecoverage.17.9.0.nupkg.sha512",
+    "C:\\Users\\Mik\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Mik\\.nuget\\packages\\microsoft.net.test.sdk\\17.9.0\\microsoft.net.test.sdk.17.9.0.nupkg.sha512",
     "C:\\Users\\Mik\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.9.0\\microsoft.testplatform.objectmodel.17.9.0.nupkg.sha512",
     "C:\\Users\\Mik\\.nuget\\packages\\microsoft.testplatform.testhost\\17.9.0\\microsoft.testplatform.testhost.17.9.0.nupkg.sha512",

@@ -1,7 +1,39 @@
 ﻿@page "/"
+@using RenbitTestTask.Application.Commands
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Forms
+@rendermode RenderMode.InteractiveServer
 
 <PageTitle>Home</PageTitle>
+<hr />
+<EditForm FormName="UploadBlob" Model="@command" OnValidSubmit="@SubmitValidForm">
+    <FluentValidationValidator />
+    <label>Email</label>
+    <div>
+        <InputText @bind-Value="@command.UserEmail" />
+        <ValidationMessage For="@(() => command.UserEmail)" />
+    </div>
+    <label>File</label>
+    <div>
+        <InputFile OnChange="@LoadFile" accept=".docx" />
+        <ValidationMessage For="@(() => command.File)" />
+    </div>
+    <button type="submit">Upload</button>
+    <label>@message</label>
+</EditForm>
 
-<h1>Hello, world!</h1>
+@code {
+    private UploadBlobCommand command = new UploadBlobCommand();
+    string message;
 
-Welcome to your new app.
+    async void SubmitValidForm(EditContext context)
+    {
+        var model = context.Model;
+        StateHasChanged();
+    }
+
+    private void LoadFile(InputFileChangeEventArgs e)
+    {
+        command.File = e.File;
+    }
+}
