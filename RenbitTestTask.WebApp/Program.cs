@@ -1,3 +1,4 @@
+using RenbitTestTask.Application.Commands;
 using RenbitTestTask.WebApp.Components;
 
 namespace RenbitTestTask.WebApp
@@ -11,7 +12,10 @@ namespace RenbitTestTask.WebApp
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
-
+            builder.Services.AddMediatR(c =>
+                c.RegisterServicesFromAssemblyContaining<Program>());
+            builder.Services.AddMediatR(c =>
+    c.RegisterServicesFromAssemblyContaining<UploadBlobCommand>());
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
