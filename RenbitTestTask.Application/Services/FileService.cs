@@ -18,7 +18,7 @@ namespace RenbitTestTask.Application.Services
             var credential = new StorageSharedKeyCredential(_storageAccount, _key);
             var blobUri = $"https://{_storageAccount}.blob.core.windows.net";
             _blobServiceClient = new BlobServiceClient(new Uri(blobUri), credential);
-            _filesContainer = _blobServiceClient.GetBlobContainerClient("files");
+            _filesContainer = _blobServiceClient.GetBlobContainerClient(Environment.GetEnvironmentVariable("BLOB_STORAGE_CONTAINER_NAME"));
         }
 
         public async Task<BlobResponseDto> UploadAsync(IBrowserFile blob, string userEmail)
@@ -27,8 +27,9 @@ namespace RenbitTestTask.Application.Services
             BlobClient client = _filesContainer.GetBlobClient(blob.Name);
             IDictionary<string, string> metadata = new Dictionary<string, string>
             {
-            { "UserEmail", userEmail }
+                { "UserEmail", userEmail }
             };
+
             try
             {
                 await using (Stream data = blob.OpenReadStream())
