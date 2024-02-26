@@ -8,7 +8,8 @@ namespace RenbitTestTask.Application.Commands
         public async Task<string> Handle(UploadBlobCommand request, CancellationToken cancellationToken)
         {
             FileService service = new FileService();
-            var result = await service.UploadAsync(request.File);
+
+            var result = await service.UploadAsync(request.File, request.UserEmail);
 
             return result.Status;
         }

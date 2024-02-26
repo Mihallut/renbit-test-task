@@ -28,6 +28,7 @@
 
     async void SubmitValidForm(EditContext context)
     {
+        message = "Uploading file...";
         message = await mediator.Send(command);
         var model = context.Model;
         StateHasChanged();

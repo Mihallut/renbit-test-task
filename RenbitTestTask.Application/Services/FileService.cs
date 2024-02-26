@@ -1,5 +1,6 @@
 ﻿using Azure.Storage;
 using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
 using Microsoft.AspNetCore.Components.Forms;
 using RenbitTestTask.Application.Models;
 
@@ -20,16 +21,23 @@ namespace RenbitTestTask.Application.Services
             _filesContainer = _blobServiceClient.GetBlobContainerClient("files");
         }
 
-        public async Task<BlobResponseDto> UploadAsync(IBrowserFile blob)
+        public async Task<BlobResponseDto> UploadAsync(IBrowserFile blob, string userEmail)
         {
             BlobResponseDto response = new();
             BlobClient client = _filesContainer.GetBlobClient(blob.Name);
-
+            IDictionary<string, string> metadata = new Dictionary<string, string>
+            {
+            { "UserEmail", userEmail }
+            };
             try
             {
                 await using (Stream data = blob.OpenReadStream())
                 {
-                    await client.UploadAsync(data);
+                    await client.UploadAsync(data, new BlobUploadOptions
+                    {
+                        HttpHeaders = new BlobHttpHeaders { ContentType = "application/octet-stream" },
+                        Metadata = metadata
+                    });
                 }
             }
             catch (Exception ex)
