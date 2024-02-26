@@ -11,7 +11,7 @@ namespace RenbitTestTask.FuncApp
     public class SendEmailFunction
     {
         private readonly ILogger _logger;
-        private readonly string _apiKey = "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";
+        private readonly string _apiKey = Environment.GetEnvironmentVariable("BREVO_API_KEY");
 
         public SendEmailFunction(ILoggerFactory loggerFactory)
         {
