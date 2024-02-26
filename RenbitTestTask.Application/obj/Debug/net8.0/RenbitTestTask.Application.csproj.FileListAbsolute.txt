@@ -1,0 +1,13 @@
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\bin\Debug\net8.0\RenbitTestTask.Application.deps.json
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\bin\Debug\net8.0\RenbitTestTask.Application.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\bin\Debug\net8.0\RenbitTestTask.Application.pdb
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\RenbitTestTask.Application.csproj.AssemblyReference.cache
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\RenbitTestTask.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\RenbitTestTask.Application.AssemblyInfoInputs.cache
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\RenbitTestTask.Application.AssemblyInfo.cs
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\RenbitTestTask.Application.csproj.CoreCompileInputs.cache
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\RenbitTestTask.Application.sourcelink.json
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\RenbitTestTask.Application.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\refint\RenbitTestTask.Application.dll
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\RenbitTestTask.Application.pdb
+C:\Users\Mik\source\repos\Renbit\renbit-test-task\RenbitTestTask.Application\obj\Debug\net8.0\ref\RenbitTestTask.Application.dll
