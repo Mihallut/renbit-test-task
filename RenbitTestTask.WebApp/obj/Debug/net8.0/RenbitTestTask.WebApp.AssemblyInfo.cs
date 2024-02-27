@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RenbitTestTask.WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9c6a909a5a9156d51bd2051c2a6aa7f00334f4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ebabe64c02393c4936d470bf2b29c3436f254d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("RenbitTestTask.WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RenbitTestTask.WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

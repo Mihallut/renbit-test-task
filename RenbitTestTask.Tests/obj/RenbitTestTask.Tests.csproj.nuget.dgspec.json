@@ -4,14 +4,14 @@
     "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\RenbitTestTask.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\RenbitTestTask.Tests.csproj": {
+    "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Application\\RenbitTestTask.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\RenbitTestTask.Tests.csproj",
-        "projectName": "RenbitTestTask.Tests",
-        "projectPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\RenbitTestTask.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Application\\RenbitTestTask.Application.csproj",
+        "projectName": "RenbitTestTask.Application",
+        "projectPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Application\\RenbitTestTask.Application.csproj",
         "packagesPath": "C:\\Users\\Mik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\obj\\",
+        "outputPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,193 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.19.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.FuncApp\\RenbitTestTask.FuncApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.FuncApp\\RenbitTestTask.FuncApp.csproj",
+        "projectName": "RenbitTestTask.FuncApp",
+        "projectPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.FuncApp\\RenbitTestTask.FuncApp.csproj",
+        "packagesPath": "C:\\Users\\Mik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.FuncApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.19.1, )"
+            },
+            "Azure.Storage.Files.Shares": {
+              "target": "Package",
+              "version": "[12.1.0, )"
+            },
+            "Azure.Storage.Queues": {
+              "target": "Package",
+              "version": "[12.11.1, )"
+            },
+            "Microsoft.Azure.Functions.Worker": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.Storage": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Sdk": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Microsoft.Extensions.Azure": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "sib_api_v3_sdk": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\RenbitTestTask.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\RenbitTestTask.Tests.csproj",
+        "projectName": "RenbitTestTask.Tests",
+        "projectPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\RenbitTestTask.Tests.csproj",
+        "packagesPath": "C:\\Users\\Mik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Application\\RenbitTestTask.Application.csproj": {
+                "projectPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.Application\\RenbitTestTask.Application.csproj"
+              },
+              "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.FuncApp\\RenbitTestTask.FuncApp.csproj": {
+                "projectPath": "C:\\Users\\Mik\\source\\repos\\Renbit\\renbit-test-task\\RenbitTestTask.FuncApp\\RenbitTestTask.FuncApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
@@ -52,6 +239,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.9.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

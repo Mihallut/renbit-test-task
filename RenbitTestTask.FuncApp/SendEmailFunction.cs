@@ -13,9 +13,9 @@ namespace RenbitTestTask.FuncApp
         private readonly ILogger _logger;
         private readonly string _apiKey = Environment.GetEnvironmentVariable("BREVO_API_KEY");
 
-        public SendEmailFunction(ILoggerFactory loggerFactory)
+        public SendEmailFunction(ILogger<SendEmailFunction> logger)
         {
-            _logger = loggerFactory.CreateLogger<SendEmailFunction>();
+            _logger = logger;
         }
 
         [Function("SendEmailFunction")]
@@ -30,6 +30,15 @@ namespace RenbitTestTask.FuncApp
             var containerName = Environment.GetEnvironmentVariable("BLOB_STORAGE_CONTAINER_NAME");
             var sasTokenExpiryInHours = 1;
 
+            bool isFunctionCanBeTriggered = true;
+
+            isFunctionCanBeTriggered = ValidateParams(metadata, name, storageConnectionString, containerName, isFunctionCanBeTriggered);
+
+            if (!isFunctionCanBeTriggered)
+            {
+                return;
+            }
+
             // Get the file URL with SAS token
             var blobServiceClient = new BlobServiceClient(storageConnectionString);
             var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
@@ -41,6 +50,51 @@ namespace RenbitTestTask.FuncApp
 
             SendEmail(userEmail, name, fileUrlWithSas);
 
+        }
+
+        private bool ValidateParams(IDictionary<string, string> metadata, string name, string? storageConnectionString, string? containerName, bool isFunctionCanBeTriggered)
+        {
+            if (string.IsNullOrEmpty(_apiKey))
+            {
+                isFunctionCanBeTriggered = false;
+                _logger.LogError($"Function can not be executed. BREVO_API_KEY environmental variable is null or empty.");
+            }
+            if (string.IsNullOrEmpty(storageConnectionString))
+            {
+                isFunctionCanBeTriggered = false;
+                _logger.LogError($"Function can not be executed. BLOB_STORAGE_CONNECTION_STRING environmental variable is null or empty.");
+            }
+            if (string.IsNullOrEmpty(containerName))
+            {
+                isFunctionCanBeTriggered = false;
+                _logger.LogError($"Function can not be executed. BLOB_STORAGE_CONTAINER_NAME environmental variable is null or empty.");
+            }
+            if (string.IsNullOrEmpty(name))
+            {
+                isFunctionCanBeTriggered = false;
+                _logger.LogError($"Function can not be executed. metadata is null or empty.");
+            }
+            if (metadata is null)
+            {
+                isFunctionCanBeTriggered = false;
+                _logger.LogError($"Function can not be executed. metadata is null or empty.");
+            }
+            else
+            {
+                if (metadata.Count == 0)
+                {
+                    isFunctionCanBeTriggered = false;
+                    _logger.LogError($"Function can not be executed. metadata is null or empty.");
+                }
+                else
+                if (!metadata.ContainsKey("UserEmail"))
+                {
+                    isFunctionCanBeTriggered = false;
+                    _logger.LogError($"Function can not be executed. metadata is null or empty.");
+                }
+            }
+
+            return isFunctionCanBeTriggered;
         }
 
         private void SendEmail(string userEmail, string blobName, string sasLink)
