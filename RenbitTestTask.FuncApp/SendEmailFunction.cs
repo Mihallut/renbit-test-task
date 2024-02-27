@@ -13,9 +13,9 @@ namespace RenbitTestTask.FuncApp
         private readonly ILogger _logger;
         private readonly string _apiKey = Environment.GetEnvironmentVariable("BREVO_API_KEY");
 
-        public SendEmailFunction(ILoggerFactory loggerFactory)
+        public SendEmailFunction(ILogger<SendEmailFunction> logger)
         {
-            _logger = loggerFactory.CreateLogger<SendEmailFunction>();
+            _logger = logger;
         }
 
         [Function("SendEmailFunction")]
@@ -81,7 +81,13 @@ namespace RenbitTestTask.FuncApp
             }
             else
             {
-                if (string.IsNullOrEmpty(metadata["UserEmail"]))
+                if (metadata.Count == 0)
+                {
+                    isFunctionCanBeTriggered = false;
+                    _logger.LogError($"Function can not be executed. metadata is null or empty.");
+                }
+                else
+                if (!metadata.ContainsKey("UserEmail"))
                 {
                     isFunctionCanBeTriggered = false;
                     _logger.LogError($"Function can not be executed. metadata is null or empty.");
