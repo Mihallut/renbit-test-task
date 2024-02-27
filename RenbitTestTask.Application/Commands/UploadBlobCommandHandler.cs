@@ -8,8 +8,17 @@ namespace RenbitTestTask.Application.Commands
         public async Task<string> Handle(UploadBlobCommand request, CancellationToken cancellationToken)
         {
             FileService service = new FileService();
+            var result = new Models.BlobResponseDto();
 
-            var result = await service.UploadAsync(request.File, request.UserEmail);
+            if (request.File is not null && !string.IsNullOrEmpty(request.UserEmail))
+            {
+                result = await service.UploadAsync(request.File, request.UserEmail);
+            }
+            else
+            {
+                result.Error = true;
+                result.Status = "\nNull parameters. Function can not be executed";
+            }
 
             return result.Status;
         }
