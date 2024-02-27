@@ -19,7 +19,7 @@ namespace RenbitTestTask.FuncApp
         }
 
         [Function("SendEmailFunction")]
-        public void Run([BlobTrigger("files/{name}", Connection = "")]
+        public void Run([BlobTrigger("files/{name}", Connection = "AzureWebJobsStorage")]
         string blob,
         IDictionary<string, string> metadata, string name)
         {
