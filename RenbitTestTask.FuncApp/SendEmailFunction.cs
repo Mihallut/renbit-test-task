@@ -34,7 +34,7 @@ namespace RenbitTestTask.FuncApp
 
             isFunctionCanBeTriggered = ValidateParams(metadata, name, storageConnectionString, containerName, isFunctionCanBeTriggered);
 
-            if (isFunctionCanBeTriggered)
+            if (!isFunctionCanBeTriggered)
             {
                 return;
             }
