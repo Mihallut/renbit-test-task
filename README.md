@@ -13,3 +13,15 @@ Test Task for the .Net Trainee Camp
 As a result, you must provide a link to Azure Web Application with the Form where user can upload the file and receive notification.
 
 Please provide URL to the web app and the github link to the source code of web application and azure function.
+
+
+
+Unit Test Result:
+![image](https://github.com/Mihallut/renbit-test-task/assets/98767826/2d49a3c8-a90c-45d0-8fb5-e334519ab254)
+
+Link to azure-hosted website:
+https://renbit-test-task-web-app.azurewebsites.net/
+
+Link to GitHub repository with code:
+https://github.com/Mihallut/renbit-test-task
+
