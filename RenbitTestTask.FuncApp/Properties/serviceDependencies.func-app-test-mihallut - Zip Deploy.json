@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/microsoft.insights/components/func-app-test-mihallut",
+      "type": "appInsights.azure",
+      "connectionId": "APPLICATIONINSIGHTS_CONNECTION_STRING"
+    },
+    "storage1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/func-app-test-mihallut/providers/Microsoft.ServiceLinker/linkers/AzureWebJobsStorage_1FADC1BA7D, /subscriptions/d92be627-0322-48b2-98d1-7df52149c8e2/resourceGroups/mihallut-resource-group/providers/Microsoft.Web/sites/func-app-test-mihallut/providers/Microsoft.ServiceLinker/linkers/AzureWebJobsStorage_0319C1AE43",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/mihallutstorageacc",
+      "type": "storage.azure",
+      "connectionId": "AzureWebJobsStorage",
+      "dynamicId": null
+    }
+  }
+}

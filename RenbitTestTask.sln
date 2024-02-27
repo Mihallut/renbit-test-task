@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RenbitTestTask.Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RenbitTestTask.Tests", "RenbitTestTask.Tests\RenbitTestTask.Tests.csproj", "{E2FC3AB4-B4AF-4EA3-99BD-FA03563D407A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenbitTestTask.FuncApp", "RenbitTestTask.FuncApp\RenbitTestTask.FuncApp.csproj", "{4FF8DAFC-C822-43A5-85FB-DBB048C3238B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RenbitTestTask.FuncApp", "RenbitTestTask.FuncApp\RenbitTestTask.FuncApp.csproj", "{51C23E17-8F30-400D-9C46-9115C7A0EB49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{E2FC3AB4-B4AF-4EA3-99BD-FA03563D407A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2FC3AB4-B4AF-4EA3-99BD-FA03563D407A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2FC3AB4-B4AF-4EA3-99BD-FA03563D407A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FF8DAFC-C822-43A5-85FB-DBB048C3238B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FF8DAFC-C822-43A5-85FB-DBB048C3238B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FF8DAFC-C822-43A5-85FB-DBB048C3238B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FF8DAFC-C822-43A5-85FB-DBB048C3238B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C23E17-8F30-400D-9C46-9115C7A0EB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C23E17-8F30-400D-9C46-9115C7A0EB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C23E17-8F30-400D-9C46-9115C7A0EB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C23E17-8F30-400D-9C46-9115C7A0EB49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
